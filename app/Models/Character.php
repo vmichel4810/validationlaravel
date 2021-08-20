@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Character extends Model
 {
-    use HasFactory;
+    public function designer()
+    {
+        return $this->belongsTo(Designer::class);
+    }
 }
